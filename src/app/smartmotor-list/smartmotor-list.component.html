@@ -1,0 +1,9 @@
+<h2>Motors</h2>
+<div *ngFor="let motor of motors">
+  <h3>
+    <a [title]="motor.name + ' details'"
+       [routerLink]="['/motors', motor.id]">
+    {{ motor.name }}
+    </a>
+  </h3>
+</div>
