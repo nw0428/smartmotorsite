@@ -9,6 +9,7 @@ import { SmartmotorListComponent } from './smartmotor-list/smartmotor-list.compo
 
 import { IMqttServiceOptions, MqttModule } from "ngx-mqtt";
 import { environment as env } from '../environments/environment';
+import { ScatterComponent } from './scatter/scatter.component';
 
 const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
     hostname: env.mqtt.server,
@@ -21,7 +22,8 @@ const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
   declarations: [
     AppComponent,
     SmartmotorComponent,
-    SmartmotorListComponent
+    SmartmotorListComponent,
+    ScatterComponent
   ],
   imports: [
     BrowserModule,
