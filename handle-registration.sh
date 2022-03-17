@@ -6,6 +6,10 @@ else
     export MOTORS="[]"
 fi
 
+if [ -z "$MOTORS" ]; then
+    export MOTORS="[]"
+fi
+
 mosquitto_sub -t motors/register | while read -r line;
     do export MOTORS=$(echo $line | jq -c '[.] + (env.MOTORS|fromjson)')
     echo $MOTORS > motor_list.txt
